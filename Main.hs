@@ -11,6 +11,8 @@ main = do
   putStr "\n"
   putStr (show (fac 5))
   putStr "\n"
+  putStr (show (fact 5))
+  putStr "\n"
   putStr (show (is_zero 5))
 
 --Imperative Programming
@@ -62,3 +64,10 @@ fac n
 --Pattern matching
 is_zero 0 = "TRUE"
 is_zero _ = "FALSE"
+
+--Accumulators
+fact n = aux n 1
+  where
+    aux n acc
+      | n<=1 = acc
+      | otherwise = aux (n-1) (n*acc)
