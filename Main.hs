@@ -10,6 +10,8 @@ main = do
   putStr (show (factorial 5))
   putStr "\n"
   putStr (show (fac 5))
+  putStr "\n"
+  putStr (show (is_zero 5))
 
 --Imperative Programming
 --in_range_ min max x =
@@ -56,3 +58,7 @@ factorial n =
 fac n
   | n <= 1 = 1
   | otherwise = n * fac (n-1)
+
+--Pattern matching
+is_zero 0 = "TRUE"
+is_zero _ = "FALSE"
