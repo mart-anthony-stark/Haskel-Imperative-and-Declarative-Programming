@@ -1,21 +1,15 @@
-main :: IO ()
 
 main = do
   putStrLn "Hello Mart"
   if in_range__ 1 5 3
     then putStrLn "TRUE"
     else putStrLn "FALSE"
-  putStr (show (10 `add` 20))
-  putStr "\n"
-  putStr (show (factorial 5))
-  putStr "\n"
-  putStr (show (fac 5))
-  putStr "\n"
-  putStr (show (fact 5))
-  putStr "\n"
-  putStr (show (is_zero 5))
-  putStr "\n"
-  putStr (show (asc 1 5))
+  putStrLn (show (10 `add` 20))
+  putStrLn (show (factorial 5))
+  putStrLn (show (fac 5))
+  putStrLn (show (fact 5))
+  putStrLn (show (is_zero 5))
+  putStrLn (show (asc 1 5))
 
 --Imperative Programming
 --in_range_ min max x =
