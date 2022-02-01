@@ -5,6 +5,9 @@ main = do
   if in_range__ 1 5 3
     then putStrLn "TRUE"
     else putStrLn "FALSE"
+  putStr (show (factorial 5))
+  putStr "\n"
+  putStr (show (10 `add` 20))
 
 --Imperative Programming
 --in_range_ min max x =
@@ -37,5 +40,12 @@ in_range__ min max x =
 --Infix operator
 --ghci > :t (+)
 --(+) :: Num a => a -> a -> -> a
-add a b = show a+b
---putStrLn 10 `add` 20
+add a b = a+b
+--10 `add` 20
+
+--Recursion
+factorial n =
+  if n <= 1 then
+    1
+  else
+    n * factorial (n-1)
