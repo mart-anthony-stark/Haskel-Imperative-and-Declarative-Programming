@@ -2,7 +2,7 @@ main :: IO ()
 
 main = do
   putStrLn "Hello Mart"
-  if in_range 1 5 3
+  if in_range_ 1 5 3
     then putStrLn "TRUE"
     else putStrLn "FALSE"
 
@@ -22,7 +22,7 @@ in_range min max x =
   ilb && iub
 
 -- 'Where' binding
-in_range_ min max x = ilb && ulb
+in_range_ min max x = ilb && iub
   where
     ilb = min <= x
     iub = max >= x
