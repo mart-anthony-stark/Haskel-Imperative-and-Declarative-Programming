@@ -14,6 +14,8 @@ main = do
   putStr (show (fact 5))
   putStr "\n"
   putStr (show (is_zero 5))
+  putStr "\n"
+  putStr (show (asc 1 5))
 
 --Imperative Programming
 --in_range_ min max x =
@@ -71,3 +73,14 @@ fact n = aux n 1
     aux n acc
       | n<=1 = acc
       | otherwise = aux (n-1) (n*acc)
+
+--Lists
+nums::[Integer]
+nums = [1,2,3,4,5]
+
+--Generating a List
+asc :: Int -> Int -> [Int]
+asc n m
+  | m<n = []
+  | m==n = [m]
+  | m > n = n : asc (n+1) m
