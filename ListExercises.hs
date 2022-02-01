@@ -11,3 +11,10 @@ nub [] = []
 nub (x:xs)
   | x `elem` xs = nub xs
   | otherwise = x:nub xs
+
+--3. Create a function isAsc that returns True if the list given to it is a list of ascending order
+isAsc :: [Int] -> Bool
+isAsc [] = True
+isAsc [x] = True
+isAsc (x:xy:xs) =
+  (x<=y) && isAsc(y:xs)
