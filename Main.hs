@@ -15,6 +15,7 @@ main = do
   putStrLn (show (head (asc 1 5)))
   putStrLn (show (tail (asc 1 5)))
   putStrLn (show (init (asc 1 5)))
+  putStrLn (show (multiples_of_2))
 
 --Imperative Programming
 --in_range_ min max x =
@@ -84,4 +85,5 @@ asc n m
   | m==n = [m]
   | m > n = n : asc (n+1) m
 
---
+--List comprehension
+multiples_of_2 = [2*x | x <- [1,2,3]]
