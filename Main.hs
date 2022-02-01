@@ -16,6 +16,7 @@ main = do
   putStrLn (show (tail (asc 1 5)))
   putStrLn (show (init (asc 1 5)))
   putStrLn (show (multiples_of_2))
+  putStrLn (show (multiples_w_guard))
 
 --Imperative Programming
 --in_range_ min max x =
@@ -87,3 +88,4 @@ asc n m
 
 --List comprehension
 multiples_of_2 = [2*x | x <- [1,2,3]]
+multiples_w_guard = [2*x | x<-[1,2,3], x>1]
