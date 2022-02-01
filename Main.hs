@@ -5,9 +5,11 @@ main = do
   if in_range__ 1 5 3
     then putStrLn "TRUE"
     else putStrLn "FALSE"
+  putStr (show (10 `add` 20))
+  putStr "\n"
   putStr (show (factorial 5))
   putStr "\n"
-  putStr (show (10 `add` 20))
+  putStr (show (fac 5))
 
 --Imperative Programming
 --in_range_ min max x =
@@ -49,3 +51,8 @@ factorial n =
     1
   else
     n * factorial (n-1)
+
+--Guards
+fac n
+  | n <= 1 = 1
+  | otherwise = n * fac (n-1)
