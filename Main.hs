@@ -1,3 +1,4 @@
+import Data.List
 
 main = do
   putStrLn "Hello Mart"
@@ -10,6 +11,10 @@ main = do
   putStrLn (show (fact 5))
   putStrLn (show (is_zero 5))
   putStrLn (show (asc 1 5))
+  putStrLn (show (length (asc 1 5)))
+  putStrLn (show (head (asc 1 5)))
+  putStrLn (show (tail (asc 1 5)))
+  putStrLn (show (init (asc 1 5)))
 
 --Imperative Programming
 --in_range_ min max x =
@@ -78,3 +83,5 @@ asc n m
   | m<n = []
   | m==n = [m]
   | m > n = n : asc (n+1) m
+
+--
