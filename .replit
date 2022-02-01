@@ -1,0 +1,3 @@
+run = ["runhaskell", "Main.hs"]
+
+entrypoint = "Main.hs"

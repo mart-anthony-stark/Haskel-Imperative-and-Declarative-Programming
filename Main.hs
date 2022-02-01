@@ -1,0 +1,28 @@
+main :: IO ()
+
+main = do
+  putStrLn "Hello Mart"
+  if in_range 1 5 3
+    then putStrLn "TRUE"
+    else putStrLn "FALSE"
+
+--Imperative Programming
+--in_range_ min max x =
+--  lower_bound = min <= x
+--  upper_bound = max >= x
+--  return (lower_bound && upper_bound)
+
+
+--Declarative Programming
+in_range :: Integer -> Integer -> Integer -> Bool
+in_range min max x =
+  let ilb = min <= x
+      iub = max >= x
+  in
+  ilb && iub
+
+-- 'Where' binding
+in_range_ min max x = ilb && ulb
+  where
+    ilb = min <= x
+    iub = max >= x
