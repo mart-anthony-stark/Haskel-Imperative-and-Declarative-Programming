@@ -33,3 +33,9 @@ in_range__ min max x =
   where
     ilb = min <= x
     iub = max >= x
+
+--Infix operator
+--ghci > :t (+)
+--(+) :: Num a => a -> a -> -> a
+add a b = show a+b
+--putStrLn 10 `add` 20
